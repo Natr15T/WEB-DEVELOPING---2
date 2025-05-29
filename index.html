@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monster Hunter World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 5px;
+    }
+
+    header nav {
+      padding-left: 20px;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      background-color: #1f1f1f;
+      padding: 0;
+      margin: 0;
+    }
+
+    header nav ul li {
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+    }
+
+    header nav ul li a:hover {
+      background-color: #333;
+    }
+
+    .hero {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      background-color: #ddd;
+    }
+
+    .features div {
+      width: 30%;
+    }
+
+    .overview, .setting {
+      display: flex;
+      align-items: center;
+      padding: 30px;
+      background-color: #fff;
+    }
+
+    .overview img, .setting img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .overview .text, .setting .text {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .overview .text {
+      text-align: right;
+    }
+
+    .setting .text {
+      text-align: left;
+    }
+
+    .setting {
+      flex-direction: row-reverse;
+    }
+
+    .ecosystem {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #e0e0e0;
+    }
+
+    .ecosystem h2 {
+      margin-bottom: 20px;
+    }
+
+    .biome-viewer {
+      position: relative;
+      display: inline-block;
+    }
+
+    .biome {
+      display: none;
+    }
+
+    .biome.active {
+      display: block;
+    }
+
+    .biome img {
+      width: 500px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .biome-caption {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .nav-buttons {
+      margin-top: 10px;
+    }
+
+    .nav-buttons button {
+      margin: 0 10px;
+      padding: 5px 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="monsters.html">Monsters</a></li>
+        <li><a href="weapons.html">Weapons</a></li>
+        <li><a href="guide.html">Guides</a></li>
+        <li><a href="media.html">Media</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Monster Hunter World!</h1>
+    <p>Embark on epic hunting adventures and face massive monsters in this action-packed game!</p>
+    <img src="mainpage.jpg" alt="Monster Hunter World Hero Image">
+  </section>
+
+  <section class="overview">
+    <img src="overview.jpg" alt="Game Overview">
+    <div class="text">
+      <h2>Overview</h2>
+      <p>Battle gigantic monsters in epic locales.</p>
+	  <p>As a hunter, you'll take on quests to hunt monsters in a variety of habitats.
+Take down these monsters and receive materials that you can use to create stronger weapons and armor in order to hunt even more dangerous monsters.</p>
+	  <p>In Monster Hunter: World, the latest installment in the series, you can enjoy the ultimate hunting experience, using everything at your disposal to hunt monsters in a new world teeming with surprises and excitement.</p>    </div>
+  </section>
+
+  <section class="setting">
+    <img src="setting.jpg" alt="Game Setting">
+    <div class="text">
+      <h2>Setting</h2>
+      <p>Once every decade, elder dragons trek across the sea to travel to the land known as the New World in a migration referred to as the Elder Crossing.</p>
+	  <p>To get to the bottom of this mysterious phenomenon, the Guild has formed the Research Commission, dispatching them in large fleets to the New World.</p>
+	  <p>As the Commission sends its Fifth Fleet in pursuit of the colossal elder dragon known as Zorah Magdaros, one hunter is about to embark on a journey grander than anything they could have ever imagined.</p>
+    </div>
+  </section>
+
+  <section class="ecosystem">
+    <h2>Explore the Ecosystem</h2>
+    <div class="biome-viewer">
+      <div class="biome active" id="biome0">
+        <img src="ancientforest.jpeg" alt="Ancient Forest">
+        <div class="biome-caption">Ancient Forest</div>
+      </div>
+      <div class="biome" id="biome1">
+        <img src="wildspirewaste.jpg" alt="Wildspire Waste">
+        <div class="biome-caption">Wildspire Waste</div>
+      </div>
+      <div class="biome" id="biome2">
+        <img src="coralhighlands.jpeg" alt="Coral Highlands">
+        <div class="biome-caption">Coral Highlands</div>
+      </div>
+      <div class="biome" id="biome3">
+        <img src="rottenvale.jpeg" alt="Rotten Vale">
+        <div class="biome-caption">Rotten Vale</div>
+      </div>
+      <div class="biome" id="biome4">
+        <img src="elder'sreccess.jpg" alt="Elder's Recess">
+        <div class="biome-caption">Elder's Recess</div>
+      </div>
+
+      <div class="nav-buttons">
+        <button onclick="changeBiome(-1)">&#8592; Prev</button>
+        <button onclick="closeBiome()">Close</button>
+        <button onclick="changeBiome(1)">Next &#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div>
+      <h2>Explore the World</h2>
+      <p>From lush forests to desolate deserts, explore vast landscapes filled with dangerous creatures.</p>
+    </div>
+    <div>
+      <h2>Fight Mighty Monsters</h2>
+      <p>Hunt down legendary monsters using your unique set of weapons and abilities.</p>
+    </div>
+    <div>
+      <h2>Gather Resources</h2>
+      <p>Collect materials to craft powerful gear and upgrade your arsenal.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Monster Hunter World Fansite</p>
+  </footer>
+
+  <script>
+    let currentBiome = 0;
+    const totalBiomes = 5;
+
+    function changeBiome(direction) {
+      document.getElementById(`biome${currentBiome}`).classList.remove("active");
+      currentBiome = (currentBiome + direction + totalBiomes) % totalBiomes;
+      document.getElementById(`biome${currentBiome}`).classList.add("active");
+    }
+
+    function closeBiome() {
+      document.getElementById(`biome${currentBiome}`).classList.remove("active");
+    }
+  </script>
+</body>
+</html>

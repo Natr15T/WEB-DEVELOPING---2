@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monsters - Monster Hunter World</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1c1e22; /* Matched background */
+        color: #fff;
+    }
+
+    header {
+        background-color: #333;
+        padding: 10px 20px;
+    }
+
+  header nav {
+      padding-left: 20px;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      background-color: #1f1f1f; /* dark navbar */
+      padding: 0;
+      margin: 0;
+    }
+
+    header nav ul li {
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+    }
+
+    header nav ul li a:hover {
+      background-color: #333;
+    }
+	
+    main {
+        padding: 20px;
+    }
+
+    h1, h2 {
+        text-align: center;
+        color: #ffcc00;
+    }
+
+    .monsters-list {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .monster {
+        background: #2a2d33;
+        margin-bottom: 40px;
+        padding: 20px;
+        border: 1px solid #444;
+        border-radius: 8px;
+    }
+
+    .monster-img {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .monster-img img {
+        width: 300px;
+        max-width: 100%;
+        height: auto;
+        border: 2px solid #666;
+    }
+
+    .monster-info {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .monster-stats {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .monster-desc {
+        flex: 2;
+        min-width: 300px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        color: #fff;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #666;
+        text-align: left;
+    }
+
+    th {
+        background-color: #444;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+        margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="monsters.html">Monsters</a></li>
+        <li><a href="weapons.html">Weapons</a></li>
+        <li><a href="guide.html">Guides</a></li>
+        <li><a href="media.html">Media</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="monsters-list">
+      <h1>Famous Monsters</h1>
+
+      <!-- Rathalos -->
+      <div class="monster">
+        <h2>Rathalos</h2>
+        <div class="monster-img">
+          <img src="rathalos.jpeg" alt="Rathalos" />
+        </div>
+        <div class="monster-info">
+          <div class="monster-stats">
+            <table>
+              <tr><th>Type</th><td>Flying Wyvern</td></tr>
+              <tr><th>Element</th><td>Fire</td></tr>
+              <tr><th>Weakness</th><td>Dragon, Thunder</td></tr>
+              <tr><th>Habitat</th><td>Ancient Forest</td></tr>
+              <tr><th>Threat Level</th><td>High</td></tr>
+            </table>
+          </div>
+          <div class="monster-desc">
+            <p>Rathalos are male Flying Wyverns introduced in Monster Hunter. Having appeared in every single Monster Hunter game in the series, including spin-offs, Rathalos are considered an icon of the Monster Hunter series.</p>
+            <p>Rathalos are large, bipedal wyverns with a spiny, armored hide. It is primarily bright red with black markings. They possess a flame sac used to produce deadly flaming projectiles, and poisonous talons that inflict toxic wounds. Their thick tail ends in a spiked club.</p>
+            <p>Expert flyers, Rathalos hunt from the skies, burning prey with fireballs or slashing with poisonous talons. On land, they use their legs, tail, and teeth for devastating attacks.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diablos -->
+      <div class="monster">
+        <h2>Diablos</h2>
+        <div class="monster-img">
+          <img src="diablos.jpeg" alt="Diablos" />
+        </div>
+        <div class="monster-info">
+          <div class="monster-stats">
+            <table>
+              <tr><th>Type</th><td>Flying Wyvern</td></tr>
+              <tr><th>Element</th><td>None</td></tr>
+              <tr><th>Weakness</th><td>Ice, Dragon</td></tr>
+              <tr><th>Habitat</th><td>Wildspire Waste</td></tr>
+              <tr><th>Threat Level</th><td>Very High</td></tr>
+            </table>
+          </div>
+          <div class="monster-desc">
+            <p>Diablos are large, bipedal wyverns with powerful armor. Known for their massive bull-like horns, tusk-like fangs, and a spiny neck frill. They have a studded tail used for defense.</p>
+            <p>They can burrow underground to ambush or escape, and produce a stunning roar. Diablos can charge with incredible speed, using their horns to maximize impact.</p>
+            <p>Though herbivores that feed on cacti, they are extremely territorial and aggressive, even fighting other Diablos for dominance.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nergigante -->
+      <div class="monster">
+        <h2>Nergigante</h2>
+        <div class="monster-img">
+          <img src="nergigante.png" alt="Nergigante" />
+        </div>
+        <div class="monster-info">
+          <div class="monster-stats">
+            <table>
+              <tr><th>Type</th><td>Elder Dragon</td></tr>
+              <tr><th>Element</th><td>None</td></tr>
+              <tr><th>Weakness</th><td>Thunder, Dragon</td></tr>
+              <tr><th>Habitat</th><td>Rotten Vale, Elder's Recess</td></tr>
+              <tr><th>Threat Level</th><td>Extreme</td></tr>
+            </table>
+          </div>
+          <div class="monster-desc">
+            <p>Nergigante is a bristly Elder Dragon covered in regenerating spikes. With large horns and a black-and-purple hide, it grows white spikes that harden and increase its damage.</p>
+            <p>As these spikes mature, they turn black and can repel attacks. Hunters must break them before they harden to reduce its threat level.</p>
+            <p>Highly aggressive, Nergigante will attack anything on sight. It feeds on other Elder Dragons and is theorized to help regulate their population by hunting them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Monster Hunter World Fansite</p>
+    </footer>
+  </main>
+
+</body>
+</html>

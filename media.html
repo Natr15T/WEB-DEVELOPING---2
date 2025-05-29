@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Media - Monster Hunter World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    header nav {
+      padding-left: 20px;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      background-color: #1f1f1f;
+      padding: 0;
+      margin: 0;
+    }
+
+    header nav ul li {
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+    }
+
+    header nav ul li a:hover {
+      background-color: #333;
+    }
+
+    .media-gallery {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+    }
+
+    .media-item {
+      margin-bottom: 40px;
+    }
+
+    h1, h2 {
+      color: #fff;
+    }
+
+    video {
+      width: 80%;
+      max-width: 800px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 2px solid #444;
+      border-radius: 8px;
+    }
+
+    .screenshot-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding: 10px 0;
+      justify-content: center;
+      scroll-snap-type: x mandatory;
+    }
+
+    .screenshot-container img {
+      flex: 0 0 auto;
+      width: 300px;
+      height: 168px;
+      object-fit: cover;
+      scroll-snap-align: start;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 2px solid #333;
+    }
+
+    .screenshot-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #666;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      flex-direction: column;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      width: 620px;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid #555;
+    }
+
+    .lightbox-controls {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .lightbox button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      transition: background 0.3s;
+    }
+
+    .lightbox button:hover {
+      background-color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1f1f1f;
+      color: #aaa;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      background-color: #1f1f1f;
+      border: 1px solid #444;
+      color: #f0f0f0;
+      border-radius: 5px;
+      resize: vertical;
+    }
+
+    button[type="submit"] {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="monsters.html">Monsters</a></li>
+        <li><a href="weapons.html">Weapons</a></li>
+        <li><a href="guide.html">Guides</a></li>
+        <li><a href="media.html">Media</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="media-gallery">
+    <h1>Monster Hunter World Media</h1>
+    <div class="media-item">
+      <h2>Official Trailer</h2>
+      <video controls>
+        <source src="Monster Hunter_ World Announcement Trailer.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="media-item">
+      <h2>Screenshots</h2>
+      <div class="screenshot-container">
+        <img src="screenshot1.jpeg" alt="Screenshot 1">
+        <img src="screenshot2.jpeg" alt="Screenshot 2">
+        <img src="screenshot3.jpeg" alt="Screenshot 3">
+        <img src="screenshot4.jpg" alt="Screenshot 4">
+        <img src="screenshot5.jpg" alt="Screenshot 5">
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Full Size Screenshot" id="lightbox-img">
+    <div class="lightbox-controls">
+      <button id="prev-btn">← Prev</button>
+      <button id="close-btn">✕ Close</button>
+      <button id="next-btn">Next →</button>
+    </div>
+  </div>
+
+  <!-- Latest Events Section -->
+  <section class="media-gallery">
+    <h2>Latest Events</h2>
+    <div class="media-item">
+      <p><strong>🔥 Title Update 5 Live Now!</strong> New monsters, gear, and layered armor sets are available!</p>
+      <p><strong>🎉 Anniversary Event:</strong> Celebrate with special quests and unique rewards!</p>
+      <p><strong>🗺️ Event Quest Rotation:</strong> Weekly changes with increased rewards!</p>
+    </div>
+  </section>
+
+  <!-- Community Comments Section -->
+  <section class="media-gallery">
+    <h2>Community Comments</h2>
+    <form id="comment-form" style="max-width: 600px; margin: 0 auto;">
+      <textarea id="comment-input" placeholder="Share your thoughts..." required rows="4"></textarea>
+      <button type="submit">Post Comment</button>
+    </form>
+    <div id="comments-section" style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+      <!-- Comments will appear here -->
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Monster Hunter World Fansite</p>
+  </footer>
+
+  <script>
+    // Lightbox Script
+    const screenshots = document.querySelectorAll('.screenshot-container img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('close-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    let currentIndex = 0;
+
+    const openLightbox = (index) => {
+      currentIndex = index;
+      lightboxImg.src = screenshots[currentIndex].src;
+      lightbox.style.display = 'flex';
+    };
+
+    const closeLightbox = () => {
+      lightbox.style.display = 'none';
+    };
+
+    const showPrev = () => {
+      currentIndex = (currentIndex - 1 + screenshots.length) % screenshots.length;
+      lightboxImg.src = screenshots[currentIndex].src;
+    };
+
+    const showNext = () => {
+      currentIndex = (currentIndex + 1) % screenshots.length;
+      lightboxImg.src = screenshots[currentIndex].src;
+    };
+
+    screenshots.forEach((img, index) => {
+      img.addEventListener('click', () => openLightbox(index));
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+    prevBtn.addEventListener('click', showPrev);
+    nextBtn.addEventListener('click', showNext);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showPrev();
+      if (e.key === 'ArrowRight') showNext();
+    });
+
+    // Comment Section Script
+    const commentForm = document.getElementById('comment-form');
+    const commentInput = document.getElementById('comment-input');
+    const commentsSection = document.getElementById('comments-section');
+
+    commentForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const commentText = commentInput.value.trim();
+      if (commentText) {
+        const commentEl = document.createElement('div');
+        commentEl.textContent = commentText;
+        commentEl.style.background = '#1f1f1f';
+        commentEl.style.padding = '10px';
+        commentEl.style.marginTop = '10px';
+        commentEl.style.borderRadius = '5px';
+        commentEl.style.border = '1px solid #333';
+        commentsSection.prepend(commentEl);
+        commentInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
